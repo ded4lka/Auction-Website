@@ -1,0 +1,103 @@
+<app-header></app-header>
+
+<form [formGroup]="postForm" (ngSubmit)="onSubmit()">
+    <div class="post-container">
+        <h1>Выставление лота</h1>
+        <hr>
+    
+        <label for="town"><b>Город</b></label>
+        <input type="text" placeholder="Введите ваш город" name="town" formControlName="town">
+        <div class="town"
+        [ngClass]="{'has-error': postForm.get('town')?.invalid && postForm.get('town')?.touched}">
+            <span *ngIf="postForm.get('town')?.['errors']?.['required']">Поле не может быть пустым<br></span>
+            <span *ngIf="postForm.get('town')?.['errors']?.['minlength']">Поле должно содержать как минимум 3 символа<br></span>
+            <span *ngIf="postForm.get('town')?.['errors']?.['maxlength']">Поле должно содержать не более 30 символов<br></span>
+            <span *ngIf="postForm.get('town')?.['errors']?.['pattern']">Некорректный город<br></span>
+        </div>
+
+        <br>
+        <label for="phone"><b>Телефон</b></label>
+        <input type="text" placeholder="Введите ваш контактный номер телефона" name="phone" formControlName="phone" required>
+        <div class="phone"
+        [ngClass]="{'has-error': postForm.get('phone')?.invalid && postForm.get('phone')?.touched}">
+            <span *ngIf="postForm.get('phone')?.['errors']?.['required']">Поле не может быть пустым<br></span>
+            <span *ngIf="postForm.get('phone')?.['errors']?.['pattern']">Некорректный телефон<br></span>
+        </div>
+
+
+        <br>
+        <label for="title"><b>Название</b></label>
+        <input type="text" placeholder="Введите название вещи, которую хотите продать" formControlName="title" name="title" required>
+        <div class="productName"
+        [ngClass]="{'has-error': postForm.get('title')?.invalid && postForm.get('title')?.touched}">
+            <span *ngIf="postForm.get('title')?.['errors']?.['required']">Поле не может быть пустым<br></span>
+            <span *ngIf="postForm.get('title')?.['errors']?.['pattern']">Некорректное название<br></span>
+        </div>
+
+
+        <br>
+        <label for="description"><b>Описание</b></label>
+        <input type="text" placeholder="Подробно опишите вещь, которую хотите продать" formControlName="description" name="description" required>
+        <div class="description"
+        [ngClass]="{'has-error': postForm.get('description')?.invalid && postForm.get('description')?.touched}">
+            <span *ngIf="postForm.get('description')?.['errors']?.['required']">Поле не может быть пустым<br></span>
+        </div>
+
+
+        <br>
+        <label for="imageUrl"><b>Фото</b></label>
+        <input type="text" placeholder="Вставьте ссылку на фото вашей вещи" formControlName="imageUrl" name="imageUrl" required>
+        <div class="imageUrl"
+        [ngClass]="{'has-error': postForm.get('imageUrl')?.invalid && postForm.get('imageUrl')?.touched}">
+            <span *ngIf="postForm.get('imageUrl')?.['errors']?.['required']">Поле не может быть пустым<br></span>
+        </div>
+
+        <br>
+        <label for="price"><b>Начальная цена</b></label>
+        <input type="text" placeholder="Введите начальную цену лота" formControlName="price" name="price" required>
+        <div class="photoUrl"
+        [ngClass]="{'has-error': postForm.get('price')?.invalid && postForm.get('price')?.touched}">
+            <span *ngIf="postForm.get('price')?.['errors']?.['required']">Поле не может быть пустым<br></span>
+        </div>
+
+
+        <br>
+        <label for="endDate"><b>Дата окончания</b></label><br>
+        <input type="date" id="endDate" placeholder="Укажите дату окончания аукциона" formControlName="endDate" name="endDate" required>
+
+        <br><br>    
+
+        <hr>
+  
+        <button type="submit" class="postbtn" >Выставить лот</button>
+    </div>
+</form>
+
+<!-- <label><b>Категории</b></label><br>
+
+        <input type="checkbox" id="collecting" name="collecting" value="Collecting">
+        <label for="collecting"> Коллекционирование</label><br>
+        
+        <input type="checkbox" id="art" name="art" value="Art">
+        <label for="art"> Искусство</label><br>
+
+        <input type="checkbox" id="books" name="books" value="Books">
+        <label for="books"> Книги</label><br>
+
+        <input type="checkbox" id="tech" name="tech" value="Technique">
+        <label for="tech"> Техника</label><br>
+
+        <input type="checkbox" id="music" name="music" value="Music">
+        <label for="music"> Музыка</label><br>
+
+        <input type="checkbox" id="films" name="films" value="Films">
+        <label for="films"> Фильмы</label><br>
+
+        <input type="checkbox" id="householding" name="householding" value="HouseHolding">
+        <label for="householding"> Товыра для дома</label><br>
+
+        <input type="checkbox" id="sport" name="sport" value="Sport">
+        <label for="sport"> Спорт</label><br>
+
+        <input type="checkbox" id="other" name="other" value="Other">
+        <label for="other"> Прочее</label><br><br> -->

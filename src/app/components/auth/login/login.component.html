@@ -1,0 +1,36 @@
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <div class="auth-container">
+      <button type="back" class="backbtn" routerLink="/home">На главную</button>
+        <h1>Вход</h1>
+
+        <hr>
+
+        <label for="username"><b>Логин</b></label>
+        <input type="text" placeholder="Введите ваш логин" formControlName="username" required>
+        <div class="username_error"
+          [ngClass]="{'has-error': loginForm.get('username')?.invalid && loginForm.get('username')?.touched}">
+          <span *ngIf="loginForm.get('username')?.['errors']?.['required']">Поле не может быть пустым<br></span>
+          <span *ngIf="loginForm.get('username')?.['errors']?.['minlength']">Логин должен содержать как минимум 8 символов<br></span>
+          <span *ngIf="loginForm.get('username')?.['errors']?.['pattern']">Некорректный логин<br></span>
+        </div>
+        <br>
+
+        <label for="password"><b>Пароль</b></label>
+        <input type="password" placeholder="Введите пароль" formControlName="password" required>
+        <div class="password_error"
+          [ngClass]="{'has-error': loginForm.get('password')?.invalid && loginForm.get('email')?.touched}">
+          <span *ngIf="loginForm.get('password')?.['errors']?.['required']">Поле не может быть пустым<br></span>
+          <span *ngIf="loginForm.get('password')?.['errors']?.['minlength']">Пароль слишком короткий</span>
+          <span *ngIf="loginForm.get('password')?.['errors']?.['pattern']">Недопустимый набор символов</span>
+        </div>
+
+        <br>
+        <hr>
+  
+        <button type="submit" class="authbtn" [disabled]="loginForm.invalid">Войти</button>
+      </div>
+    
+      <div class="container reg">
+        <p>У вас ещё нет аккаунта? <a routerLink="/registration">Зарегистрируйтесь</a>.</p>
+      </div>
+</form>

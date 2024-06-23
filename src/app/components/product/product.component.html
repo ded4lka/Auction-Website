@@ -1,0 +1,27 @@
+<div class="product-item">
+    <img src="{{product.imageUrl}}">
+    <div class="product-list">
+      <h2>{{product.title}}</h2>
+      <h3>{{product.description}}</h3>
+      <h3>Текущая цена (₽):</h3>
+      <span class="price">{{product.price}}</span>
+      <h3>Дата окончания:</h3>
+      <span class="enddate">{{product.endDate}}</span>
+      <h3>Текущий лидер:</h3>
+      <span class="lastUser">{{product.lastUser}}</span>
+
+      <form [formGroup]="productForm">
+        <div *ngIf="!userIsAdmin">
+        <input type="number" placeholder="Повысить цену" formControlName="price" style="height: 26px;">
+        <button style="border: 0;" (click)="buyProduct()">
+          <a class="button">Участвовать</a>
+        </button>
+        </div>
+        <div *ngIf="userIsAdmin">
+        <button style="border: 0;" (click)="closeLot()">
+          <a class="button1">Закрыть лот</a>
+        </button>
+        </div>
+      </form>
+    </div>
+  </div>

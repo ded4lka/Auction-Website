@@ -1,0 +1,5 @@
+<app-header></app-header>
+<h2>Ваши вещи</h2>
+<div class="section">
+    <app-cartitem *ngFor="let cartitem of productsService.products | filterCartProducts:cart" [cartitem]="cartitem"></app-cartitem>
+</div>

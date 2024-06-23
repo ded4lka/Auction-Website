@@ -1,0 +1,50 @@
+<form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+
+  <div class="reg-container">
+
+    <button type="back" class="backbtn" routerLink="/home">На главную</button>
+    <h1>Регистрация</h1>
+    <hr>
+    
+    <label for="username"><b>Логин</b></label>
+    <input type="text" placeholder="Придумайте логин (латиница)" formControlName="username" required>
+    <div class="username"
+      [ngClass]="{'has-error': registrationForm.get('username')?.invalid && registrationForm.get('username')?.touched}">
+      <span *ngIf="registrationForm.get('username')?.['errors']?.['required']">Поле не может быть пустым<br></span>
+      <span *ngIf="registrationForm.get('username')?.['errors']?.['minlength']">Логин должен содержать как минимум 4 символа<br></span>
+      <span *ngIf="registrationForm.get('username')?.['errors']?.['pattern']">Некорректный логин<br></span>
+    </div>
+
+    <br>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Введите ваш email" formControlName="email" required>
+    <div class="email_error"
+      [ngClass]="{'has-error': registrationForm.get('email')?.invalid && registrationForm.get('email')?.touched}">
+      <span *ngIf="registrationForm.get('email')?.['errors']?.['required']">Поле не может быть пустым<br></span>
+      <span *ngIf="registrationForm.get('email')?.['errors']?.['pattern']">Некорректный email<br></span>
+    </div>
+
+    <br>
+    
+    <label for="password"><b>Пароль</b></label>
+    <input type="password" placeholder="Придумайте пароль" formControlName="password" required>
+    <div class="password_error"
+      [ngClass]="{'has-error': registrationForm.get('password')?.invalid && registrationForm.get('email')?.touched}">
+      <span *ngIf="registrationForm.get('password')?.['errors']?.['required']">Поле не может быть пустым<br></span>
+      <span *ngIf="registrationForm.get('password')?.['errors']?.['minlength']">Пароль слишком короткий</span>
+      <span *ngIf="registrationForm.get('password')?.['errors']?.['pattern']">Недопустимый набор символов</span>
+    </div>
+
+    <br>
+    <hr>
+
+    <button name="reg-button" type="submit" class="registerbtn" click="submitRegister()"
+      [disabled]="registrationForm.invalid && this.isLoad">Зарегистрироваться</button>
+    
+  </div>
+  
+  <div class="container signin">
+    <p>У вас уже есть аккаунт? <a routerLink="/login">Войти</a>.</p>
+  </div>
+</form>

@@ -1,0 +1,52 @@
+* {box-sizing: border-box}
+
+.post-container {
+  padding: 16px;
+}
+
+input[type=text] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+hr {
+  border: 1px solid #fc5a5a;
+  margin-bottom: 25px;
+}
+
+.postbtn {
+  background-color: #fc5a5a;
+  color: black;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.post:hover {
+  opacity:1;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+span {
+  color: #fc5a5a;
+}

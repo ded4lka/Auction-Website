@@ -1,0 +1,3 @@
+<div class="section">
+    <app-product *ngFor="let product of productsService.products | filterProducts" [product]="product"></app-product>
+</div>

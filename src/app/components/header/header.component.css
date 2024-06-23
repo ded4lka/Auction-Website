@@ -1,0 +1,28 @@
+#header {
+    height: 40px;
+    margin: 0 auto;
+    padding: 0 auto;
+    display: flex;
+    background-color: #fc5a5a;
+}
+
+#name {
+    color: white;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 30px;
+}
+
+#username {
+    color: white;
+    margin-left: 570px;
+    margin-top: 12px;
+    font-size: 15px;
+}
+
+a {
+    color: white;
+    margin-left: 10px;
+    margin-top: 12px;
+    font-size: 15px;
+}

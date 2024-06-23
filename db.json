@@ -1,0 +1,160 @@
+{
+  "users": [
+    {
+      "id": "id6d844b5ae842e8",
+      "username": "deda4lka",
+      "password": "123456",
+      "email": "4lka@g",
+      "role": "USER",
+      "cart": []
+    },
+    {
+      "id": "id0be6a3262e5a3",
+      "username": "deda5lka",
+      "password": "123456",
+      "email": "5lka@g",
+      "role": "USER",
+      "cart": []
+    },
+    {
+      "id": "idd652c57ac3b7d",
+      "username": "5lka5lka",
+      "password": "123456",
+      "email": "5lka@g",
+      "role": "USER",
+      "cart": []
+    },
+    {
+      "id": "id6d844b5ae842e6",
+      "username": "admin777",
+      "password": "123456",
+      "email": "admin@gmail.com",
+      "role": "ADMIN",
+      "cart": []
+    },
+    {
+      "id": "idd955510182b4b",
+      "username": "customer1",
+      "email": "customer1@gmail.com",
+      "password": "123456",
+      "role": "USER",
+      "cart": [
+        8,
+        13,
+        12,
+        9
+      ]
+    },
+    {
+      "id": "idb22c2bb518a15",
+      "username": "customer2",
+      "email": "customer2@gmail.com",
+      "password": "123456",
+      "role": "USER",
+      "cart": [
+        8,
+        8
+      ]
+    },
+    {
+      "id": "ide2acceb010d9a",
+      "username": "customer",
+      "password": "111111",
+      "email": "customer@gmail.com",
+      "role": "USER",
+      "cart": []
+    }
+  ],
+  "products": [
+    {
+      "id": 6,
+      "title": "Автомобиль",
+      "description": "Отличный автомобиль",
+      "imageUrl": "https://img.freepik.com/free-photo/view-of-3d-car_23-2150796896.jpg",
+      "endDate": "2023-12-20",
+      "price": 1000524,
+      "isBought": false,
+      "lastUser": "customer2"
+    },
+    {
+      "id": 8,
+      "title": "Ноутбук",
+      "description": "2 ядра 2 гига",
+      "imageUrl": "https://ae04.alicdn.com/kf/S199b0b57f350462a9d3c3d1d20694ef46.jpeg",
+      "endDate": "2023-12-22",
+      "price": 45500,
+      "isBought": true,
+      "lastUser": "customer2"
+    },
+    {
+      "id": 9,
+      "title": "Лампа",
+      "description": "Яркая лампа",
+      "imageUrl": "https://api.dantonehome.ru/resize/0x610/1cexport/import_files/a4/a4f14259-84db-11ec-8134-ac1f6b4de1b1_c8bbb4cc-8f39-11ec-8139-ac1f6b4de1b1.jpeg",
+      "endDate": "2023-12-22",
+      "price": 679,
+      "isBought": false,
+      "lastUser": "customer1"
+    },
+    {
+      "id": 10,
+      "title": "Кружка",
+      "description": "Можно пить чай",
+      "imageUrl": "https://sublimart.ru/upload/iblock/bcd/89bb593c_cf75_11e7_9117_00a0d1e84acd_c7f1e789_1b85_11e8_a802_00a0d1e84acd.jpeg",
+      "endDate": "2023-12-21",
+      "price": 126,
+      "isBought": false,
+      "lastUser": "customer"
+    },
+    {
+      "id": 11,
+      "title": "Ноутбук",
+      "description": "2 ядра 2 гига",
+      "imageUrl": "https://ae04.alicdn.com/kf/S199b0b57f350462a9d3c3d1d20694ef46.jpeg",
+      "endDate": "2023-12-22",
+      "price": 45145,
+      "isBought": true,
+      "lastUser": "customer1"
+    },
+    {
+      "id": 12,
+      "title": "Холодильник",
+      "description": "Холодный очень",
+      "imageUrl": "https://timetv.ru/upload/iblock/c58/c5814ccb3044ec1d94c69fc88f9269e7.jpeg",
+      "endDate": "2023-12-25",
+      "price": 4528,
+      "isBought": false,
+      "lastUser": "customer1"
+    },
+    {
+      "id": 13,
+      "title": "Кружка",
+      "description": "Можно пить чай",
+      "imageUrl": "https://sublimart.ru/upload/iblock/bcd/89bb593c_cf75_11e7_9117_00a0d1e84acd_c7f1e789_1b85_11e8_a802_00a0d1e84acd.jpeg",
+      "endDate": "2023-12-21",
+      "price": 2100,
+      "isBought": true,
+      "lastUser": "customer1"
+    },
+    {
+      "id": 14,
+      "title": "Оленья шкура",
+      "description": "Тёплая шкура",
+      "imageUrl": "https://mybiggame.ru/optim/detailed/15/BG48.jpg",
+      "endDate": "2023-12-28",
+      "price": 2100,
+      "isBought": false,
+      "lastUser": "customer1"
+    },
+    {
+      "id": 15,
+      "title": "Кровать",
+      "description": "Удобная, мягкая, приятная кровать",
+      "imageUrl": "https://nizhniy-novgorod.raiton.ru/upload/resize_cache_webp/products/ad0d35de-f0be-11ea-bbab-54bf64fc91d5/840_840_1/4d8f8059e2863dbb9fbc711ca28770d7.webp",
+      "endDate": "2023-12-28",
+      "price": "8999",
+      "isBought": false,
+      "lastUser": ""
+    }
+  ]
+}
